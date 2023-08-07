@@ -1,2 +1,6 @@
 #!/bin/bash
-cut -c 1 | paste -s -d "
+decoded_message=""
+while read -r line; do
+  first_letter="${line:0:1}"
+  decoded_message+="$first_letter"
+echo "$decoded_message"
